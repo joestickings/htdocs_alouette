@@ -26,6 +26,11 @@ $(document).ready(function(){
 	
 	});
 
+	//HEADER - Memebers log in form submit
+	$("#MembersNavLogIn form").submit(function(){
+		$(this).slideUp();
+	});
+
 	//FOOTER - Open members log in
 	$("#FooterOnlineBooking").click(function(){
 		
@@ -36,5 +41,17 @@ $(document).ready(function(){
 		return false;
 	
 	});
+
+	//HOME PAGE FEATURE IMAGES
+	$('#HomeMainFeatureImages').crossSlide({
+	  sleep: 3,
+	  fade: 1.1
+	}, [
+	  { src: '../images/home/feature_1.jpg' },
+	  { src: '../images/home/feature_2.jpg' },
+	  { src: '../images/home/feature_3.jpg' },
+	  { src: '../images/home/feature_4.jpg' },
+	  { src: '../images/home/feature_5.jpg' }
+	]);
 
 });

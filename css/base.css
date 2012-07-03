@@ -155,8 +155,10 @@ header nav#MainNav ul li.selected a:hover {
 /* HEADER -> Members Nav */
 
 header nav#MembersNav {
+	float: left;
 	display: inline;
 	position: absolute;
+	z-index: 2;
 	top: 12px;
 	right: 0;
 	background: #454274;
@@ -171,14 +173,19 @@ header nav#MembersNav span {
 	font-size: 12px;
 	color: #fff;
 	font-weight: bold;
-	margin-right: 14px;
+	margin: 8px 14px 0 0;
+	float: left;
+	display: inline;
 }
 
 header nav#MembersNav button {
+	float: left;
+	display: inline;
 	font-size: 12px;
 	color: #1d1b40;
 	background: #f3d93c;
 	padding: 6px 10px;
+	margin: 0;
 	font-weight: bold;
 	border: none;
 	cursor: pointer;
@@ -189,23 +196,26 @@ header nav#MembersNav button {
 }
 
 header nav#MembersNav ul {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	float: left;
 	display: inline;
 }
 
 header nav#MembersNav ul li {
-	margin: 0 0 0 -4px;
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
 	text-align: center;
+	float: left;
 	display: inline;
 }
 
 header nav#MembersNav ul li a {
+	float: left;
 	display: inline;
-	margin: 0 8px 0 0;
+	margin: 8px 8px 0 0;
 	padding: 0 8px 0 0;
 	list-style-type: none;
 	font-size: 12px;
@@ -216,14 +226,14 @@ header nav#MembersNav ul li a {
 header nav#MembersNav #MembersNavLogIn {
 	position: relative;
 	width: 100%;
-	height: 2px;
 	float: left;
+	display: inline;
 }
 
 header nav#MembersNav #MembersNavLogIn form {
 	position: absolute;
 	top: -4px;
-	right: 0;
+	right: 0px;
 	background: #f3d93c;
 	width: 280px;
 	padding: 14px;
@@ -264,6 +274,18 @@ header nav#MembersNav #MembersNavLogIn form #MembersNavClose {
 	font-weight: normal;
 	float: right;
 }
+
+/* HEADER -> Social Media */
+header #SocialMedia {
+	position: absolute;
+	z-index: 1;
+	top: 68px;
+	right: 0;
+}
+
+header #SocialMedia #Header-SocialMedia-Facebook { float: left; display: block; margin-left: 4px; }
+header #SocialMedia #Header-SocialMedia-Twitter { float: left; display: block; width: 55px; overflow: hidden; margin-left: 4px; }
+header #SocialMedia #Header-SocialMedia-Google { float: left; display: block; }
 
 /* HEADER -> Hover and selected state */
 
@@ -384,8 +406,17 @@ article .mainFeature .mainFeatureContent {
 
 article .mainFeature .mainFeatureImages {
 	position: absolute;
+	float: left;
+	display: inline;
+	background: url('../images/core/feature_img_frame.jpg') no-repeat top left;
+	width: 439px;
+	height: 440px;
 	top: -18px;
 	left: 36px;
+}
+
+article .mainFeature .mainFeatureImages img {
+	margin: 36px 51px;
 }
 
 article .largeCol {

@@ -16,19 +16,58 @@
                 <li><button>Online booking</button></li>
             </ul>
 
-            <div id="MembersNavLogIn" class="clear">
-                <form method="post" action="#">
+            <div id="MembersNavLogIn">
+                <form method="post" action="http://213.239.220.199/aero-vor.ch/pro/lib/cgi-bin/login.cgi" name="frm" target="_blank">
+                    
+                    <input type="hidden" value="Enter" name="action">
+                    <input type="hidden" value="alouette_flying_club" name="company">
+
                     <label for="OnlineBookingUsername">Username</label>
-                    <input type="text" id="OnlineBookingUsername" name="OnlineBookingUsername" value="" />
+                    <input type="text" id="OnlineBookingUsername" name="Username" value="" />
 
                     <label for="OnlineBookingPassword">Password</label>
-                    <input type="password" id="OnlineBookingPassword" name="OnlineBookingPassword" value="" />
+                    <input type="password" id="OnlineBookingPassword" name="Password" size="15" value="" />
 
                     <input type="submit" class="button" value="Log in" />
                     <button id="MembersNavClose">Close</button>
                 </form>
             </div>
         </nav>
+
+        <?php if(!is_mobile_phone()) { ?>
+            <div id="SocialMedia">
+                
+                <?php $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
+
+                <!-- GOOGLE -->
+                <span id="Header-SocialMedia-Google">
+                <!-- Place this tag where you want the +1 button to render -->
+                <g:plusone size="medium" annotation="none" href="<?php echo $url; ?>"></g:plusone>
+                
+                <!-- Place this render call where appropriate -->
+                <script type="text/javascript">
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                </script>
+                </span>
+                
+                <!-- TWITTER -->
+                <span id="Header-SocialMedia-Twitter">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url; ?>" data-count="none">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </span>
+                
+                <!-- FACEBOOK -->
+                <span id="Header-SocialMedia-Facebook">
+                    <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $url; ?>&amp;send=false&amp;layout=button_count&amp;width=51&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" height="21" width="51" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+                </span>
+            
+            </div>
+        <?php } ?>
+
 
     </div>
 

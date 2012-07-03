@@ -17,4 +17,20 @@
 <!--<script type="text/javascript" language="javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
 <script type="text/javascript" language="javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" language="javascript" src="js/base.js"></script>
+
+<?php
+	function is_mobile_phone()
+	{
+		$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+		$mobiles = array("iphone","ipad", "ipod", "blackberry", "nokia", "phone","mobile safari", "iemobile");
+		
+		foreach($mobiles as $mobile)
+		{
+			if(strpos($ua,$mobile)) return true;
+		}
+		
+		return false;
+		
+	}
+?>
     

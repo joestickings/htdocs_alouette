@@ -7,6 +7,7 @@
 	<meta name="description" content="Desctiption here" />
 	<meta name="keywords" content="Keywords here" />
 	<?php include "common/page-head.php"; ?>
+    <script type="text/javascript" language="javascript" src="js/jquery.cross-slide.min.js"></script>
     
 </head>
 
@@ -18,8 +19,8 @@
 
 <article>
 	<div class="mainFeature">
-            <div class="mainFeatureImages">
-                <img src="../images/home/feature_1.jpg" width="439" height="440" alt="" />
+            <div id="HomeMainFeatureImages" class="mainFeatureImages">
+                <!-- -->
             </div>
 
             <div class="mainFeatureContent">
