@@ -1,0 +1,9 @@
+#Options +FollowSymlinks
+RewriteEngine On
+
+DirectoryIndex index.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule	Home$	index.php [NC,L,QSA]
+RewriteRule ^([^\.]+)$ $1.php [NC,L,QSA]
