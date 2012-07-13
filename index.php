@@ -33,7 +33,35 @@
 
     <div class="clear">
         <div class="largeCol">
-            Column 1
+
+            <div class="teaserBox clear">
+
+                <a href="/Trial-flights" title="Trial flights with Alouette">
+                    <img src="../images/home/trial_flights.jpg" width="255" height="186" alt="Trial flights with Alouette" />
+                </a>
+
+                <div class="teaserContent">
+                    <h2>Trial flights</h2>
+                    <p>Trial lessons are of one hour duration with a qualified instructor and the recipient will spend most of this time at the controls of the aircraft. The flight will be from Biggin Hill and will return to Biggin Hill.</p>
+                    <a href="/Trial-flights" class="button clear" title="More about trial flights">More about trial flights</a>
+                </div>
+            
+            </div>
+
+            <div class="teaserBox last clear">
+
+                <a href="/Alouette-news" title="The latest Alouette news">
+                    <img src="../images/home/members.jpg" width="255" height="186" alt="The latest Alouette news" />
+                </a>
+
+                <div class="teaserContent">
+                    <h2>Alouette news</h2>
+                    <p>Want to find out what is going on at the club? You can view video diaries from Alouette pilots aswell as details about social events, club grub nights and other important club information on our ‘latest news’ page.</p>
+                    <a href="/Alouette-news" class="button clear" title="View the latest Alouette news">View the latest Alouette news</a>
+                </div>
+            
+            </div>
+        
         </div>
 
         <div class="smallCol">
@@ -41,6 +69,9 @@
         </div>
     </div>
     
+    <?php include "common/online-booking-login.php"; ?>
+
+
 </article>
 
 

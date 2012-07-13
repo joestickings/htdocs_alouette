@@ -14,7 +14,10 @@
 
 <link href="css/base.css" rel="stylesheet" media="screen" type="text/css">
 
-<!--<script type="text/javascript" language="javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+<!--[if lt IE 9]>
+	<link href="css/ie.css" rel="stylesheet" media="screen" type="text/css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <script type="text/javascript" language="javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" language="javascript" src="js/base.js"></script>
 

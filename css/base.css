@@ -372,9 +372,11 @@ h1 {
 }
 
 h2 {
-	font-size: 24px;
-	line-height: 24px;
-	font-weight: normal;
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	word-spacing: 0.15em;
 	margin-bottom: 16px;
 }
 
@@ -389,12 +391,27 @@ article {
 	padding: 25px 0;
 }
 
+article .highlightContent {
+	background: url('../images/core/feature_bkg.gif') repeat top left;
+	padding: 30px
+}
+
 article .mainFeature {
 	width: 960px;
 	height: 413px;
 	margin-bottom: 40px;
 	position: relative;
 	background: url('../images/core/feature_bkg.gif') repeat top left;
+}
+
+article .mainFeature h2 {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	margin-bottom: 16px;
+	text-transform: none;
+	letter-spacing: 0;
+	word-spacing: 0;
 }
 
 article .mainFeature .mainFeatureContent {
@@ -422,18 +439,129 @@ article .mainFeature .mainFeatureImages img {
 article .largeCol {
 	float: left;
 	display: inline;
-	width: 600px;
-	background: red;
+	width: 614px;
+	margin: 0 40px 40px 0;
 }
+
+article .largeCol img {
+	float: left;
+	display:  inline;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #c5c3c3;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+article .largeCol .teaserBox {
+	border-bottom: 1px solid #c3c2bf;
+	padding: 0 0 40px 0;
+	margin-bottom: 40px;
+}
+
+article .largeCol .last {
+	border-bottom: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+article .largeCol .teaserContent {
+	float: left;
+	display: inline;
+	width: 306px;
+	margin: 0 0 0 40px;
+}
+
 
 article .smallCol {
 	float: left;
 	display: inline;
-	width: 360px;
+	width: 306px;
+	margin: 0 0 40px 0;
 	background: blue;
 }
 
+article #PageLogInForm input[type='text'],
+article #PageLogInForm input[type='password'] {
+	font-size: 14px;
+	padding: 8px;
+	margin: 0 25px 0 10px;
+	width: 234px;
+}
+
+
 @media only screen and (max-width: 970px) {
+
+	header #HeaderContent {
+		width: 100%;
+	}
+
+	header #HeaderContent img#LogoText {
+		display: none;
+	}
+
+	header nav#MembersNav #MembersNavLogIn form {
+		position: static;
+	}
+
+
+	footer #FooterContent {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	article {
+		width: 100%;
+	}
+
+	article .mainFeature {
+		width: auto;
+		height: auto;
+		display:  block;
+		padding: 40px;
+		margin-top: -28px;
+	}
+
+	article .mainFeature .mainFeatureImages {
+		display: none;
+	}
+
+	article .mainFeature .mainFeatureContent {
+		width: 100%;
+		position: static;
+	}
+
+	article .largeCol {
+		width: 90%;
+		padding: 0 5%;
+	}
+
+	article .largeCol .teaserContent {
+		width: auto;
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	article .largeCol img {
+		margin-right: 25px;
+		margin-bottom: 10px;
+	}
+
+	article #PageLogInForm input[type='text'],
+	article #PageLogInForm input[type='password'] {
+		width: 90%;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+
+	article #PageLogInForm label {
+		margin-bottom: 9px;
+		float: left;
+	}
 
 }
 

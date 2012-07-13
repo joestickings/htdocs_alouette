@@ -7,6 +7,7 @@
         </a>
 
         <nav id="MembersNav">
+
             <span>Members area:</span>
 
             <ul class="clear">

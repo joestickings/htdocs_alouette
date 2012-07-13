@@ -1,119 +1,30 @@
-body {
-	font-family: sans-serif, Helvetica, Arial;
+button,
+input[type='button'],
+input[type='submit'] {
+	width:auto;
+   	overflow:visible;
 }
 
-.buttonTabs li {
+header nav#MainNav ul li,
+header nav#MainNav ul li a,
+header nav#MembersNav #MembersNavLogIn form label {
 	display: inline;
 	zoom: 1;
 }
 
-.buttonTabs li a {
-	display: inline;
-	zoom: 1;
+header nav#MembersNav #MembersNavLogIn form {
+	top: 30px;
 }
 
-.buttonTabs li .selectedButton {
-	margin-bottom: -5px;
-	padding-top: 9px;
-	padding-bottom: 9px;
+header nav#MainNav ul li {
+	margin: 0;
 }
 
-ul.onlineAdvertisingList li { display: inline; zoom: 1; }
-
-header ul#Navigation li#Selected a,
-header ul#Navigation li#Selected a:hover {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 4px 6px;
-	font-weight: normal;
+footer #FooterContent ul li {
+	padding-right: 4px;
+	margin-right: 10px;
 }
 
-header ul#Navigation li#Selected { margin-top: 8px; }
-
-/* ICONS */
-.aboutMe .illustratorIcon,
-.aboutMe .dreamweaverIcon,
-.aboutMe .flashIcon,
-.aboutMe .visualstudioIcon,
-.aboutMe .flickrIcon,
-.aboutMe .photoshopIcon { margin-right: 8px; }
-
-.illustratorIcon,
-.dreamweaverIcon,
-.flashIcon,
-.visualstudioIcon,
-.flickrIcon,
-.photoshopIcon { margin-right: 0px; }
-
-
-ul.subMenu li .flickrIcon { margin: 0 0 -2px 0; padding: 0 4px; display: inline; zoom: 1; background-position: 4px -122px; }
-ul.subMenu li .facebookIcon { margin: 0 0 -2px 0; padding: 0 4px; display: inline; zoom: 1; background-position: 4px -143px; }
-
-
-ul.ticks { margin-top: 14px; }
-
-
-ul.arrows li { line-height: 0.7em; list-style-position:outside; margin-left: 15px; padding-left: 4px; margin-bottom: 11px; }
-ul.ticks li { line-height: 0.7em; list-style-position:outside; margin-left: 15px; padding-left: 12px; margin-bottom: 11px; }
-
-
-.aboutMe ul.noBullets { margin: 0 0 20px 0; padding: 0; width: 100%; float: left; }
-.aboutMe ul.noBullets li { line-height: 0.7em; margin-left: 0; padding-left: 0; width: 50%; float: left; line-height: 1.4em; }
-
-.aboutMe ul.personalDetails { float: left; width: 100%; }
-.aboutMe ul.personalDetails li { list-style-type: none; margin-left: 0; padding: 0; float: left; width: 100%; } 
-
-#SkillSet { float: left; width: 100%; margin-bottom: 25px; }
-
-.flex-control-nav li { display: inline; zoom: 1;}
-
-.flex-direction-nav { float: left; display: block; width: 100%; }	
-
-footer ul.ticks {
-	font-size: 1.2em;
-	margin: 16px 0 0 18px
-}
-
-footer ul.ticks li {
-	margin-left: 0;
-	padding-left: 0;
-	margin-bottom: 4px;
-}
-
-footer ul.noBullets li {
-	float: left;
-	margin-left: 0;
-	padding-left: 0;
-	width: 100%;
-}
-
-footer .footerHeading {
-	float: left;
-	width: 100%;
-	margin-bottom: 8px;
-}
-
-
-
-@media only screen and (max-width: 970px) {
-
-header ul#Navigation li#Selected {
-	margin-top: -42px !important;
-	margin-bottom: 20px;
-	padding: 0;
-	display: inline !important;
-	zoom: 1; 
-}
-
-header ul#Navigation li#Selected a {
-	margin-top: -150px;
-	float: none !important;
-	display: inline !important;
-	zoom: 1;
-	padding-top: 6px !important;
-	padding-bottom: 7px !important;
-}
-
-
-
+footer #FooterContent ul li.first {
+	margin-right: 10px;
 }
