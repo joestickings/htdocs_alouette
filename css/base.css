@@ -32,6 +32,9 @@ html[xmlns] .clear {
    overflow: visible;
 }
 
+html {
+	-webkit-text-size-adjust: none;
+}
 
 body {
 	color: #1d1b40;
@@ -54,14 +57,19 @@ select {
 	color: #1d1b40;
 }
 
+input[type='text'],input[type='button'], input[type='submit'] {
+	-webkit-appearance: none;
+}
+
 a {
 	outline: none;
-	color: #0567a0;
+	color: #454274;
 	text-decoration: none;
 }
 
 a:hover {
-	color: red;
+	color: #454274;
+	text-decoration: underline;
 }
 
 input.button,
@@ -84,6 +92,7 @@ input:hover.button,
 button:hover.button,
 a:hover.button {
 	background: #454274;
+	text-decoration: none;
 }
 
 /* HEADER */
@@ -142,6 +151,10 @@ header nav#MainNav ul li a {
 	background: url('../images/core/nav_sep.gif') no-repeat bottom right;
 }
 
+header nav#MainNav ul li a:hover {
+	text-decoration: none;
+}
+
 header nav#MainNav ul li.last a {
 	background: none;
 }
@@ -150,6 +163,10 @@ header nav#MainNav ul li.selected a,
 header nav#MainNav ul li.selected a:hover {
 	background: #454274;
 	color: #fff;
+}
+
+header nav#MainNav #ShowMenuButton {
+	display: none;
 }
 
 /* HEADER -> Members Nav */
@@ -244,10 +261,10 @@ header nav#MembersNav #MembersNavLogIn form {
 	-moz-border-radius: 6px 0 6px 6px;
 	-webkit-border-radius: 6px 0 6px 6px;
 	-o-border-radius: 6px 0 6px 6px;
-	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-	-o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 header nav#MembersNav #MembersNavLogIn form label {
@@ -274,6 +291,8 @@ header nav#MembersNav #MembersNavLogIn form #MembersNavClose {
 	font-weight: normal;
 	float: right;
 }
+
+
 
 /* HEADER -> Social Media */
 header #SocialMedia {
@@ -393,7 +412,9 @@ article {
 
 article .highlightContent {
 	background: url('../images/core/feature_bkg.gif') repeat top left;
-	padding: 30px
+	padding: 30px;
+	display: block;
+	clear: both;
 }
 
 article .mainFeature {
@@ -480,7 +501,6 @@ article .smallCol {
 	display: inline;
 	width: 306px;
 	margin: 0 0 40px 0;
-	background: blue;
 }
 
 article #PageLogInForm input[type='text'],
@@ -492,9 +512,18 @@ article #PageLogInForm input[type='password'] {
 }
 
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 950px) {
 
 	header #HeaderContent {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 0;
+		margin-bottom: -8px;
+	}
+
+	header #HeaderContent #Logo {
+		margin-bottom: 15px;
+		display: inline-block;
 		width: 100%;
 	}
 
@@ -502,10 +531,112 @@ article #PageLogInForm input[type='password'] {
 		display: none;
 	}
 
-	header nav#MembersNav #MembersNavLogIn form {
-		position: static;
+	header nav#MainNav #ShowMenuButton {
+		display: inline-block;
+		float:  left;
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		font-size: 16px;
+		font-weight: bold;
+		color: #fff;
+		background: none;
+		border: none;
+		text-transform: uppercase;
+		cursor: pointer;
 	}
 
+	header nav#MainNav #ShowMenuButton a#Menu {
+		display: block;
+		padding: 10px 25px;
+		color: #fff;
+		font-weight: bold;
+		font-size: 20px;
+		text-decoration: none;
+		text-align: center;
+	}
+	
+	header nav#MainNav #ShowMenuButton .icon {
+		width: 15px;
+		height: 15px;
+		display: inline-block;
+		position: relative;
+		top: 1px;
+		margin-left: 4px;
+	}
+	
+	header nav#MainNav #ShowMenuButton .icon.plus {
+		background: url('../images/core/plus_minus.gif') no-repeat 0 0;
+	}
+	
+	header nav#MainNav #ShowMenuButton .icon.minus {
+		background: url('../images/core/plus_minus.gif') no-repeat -15px 0;
+	}
+
+	header nav#MainNav {
+		display: inline-block;
+	}
+
+	header nav#MainNav ul {
+		width: 100%;
+		text-align: left;
+		display: none;
+	}
+
+	header nav#MainNav ul li {
+		display: inline-block;
+		width: 50%;
+	}
+
+	header nav#MainNav ul li a {
+		display: block;
+		background: none;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #454274;
+		margin: 0 20px;
+	}
+
+	header nav#MainNav ul li.last a {
+		border-bottom: none;
+		margin-bottom: 20px;
+	}
+
+	header nav#MainNav ul li.selected a,
+	header nav#MainNav ul li.selected a:hover {
+		background: none;
+	}
+	
+	header nav#MembersNav {
+		position: static;
+		display: inline-block;
+		border-radius: 6px 6px 0 0;
+		-moz-border-radius: 6px 6px 0 0;
+		-webkit-border-radius: 6px 6px 0 0;
+		-o-border-radius: 6px 6px 0 0;
+		float: none;
+	}
+
+	header nav#MembersNav ul {
+		text-align: center;
+		display: inline-block;
+	}
+
+	header nav#MembersNav span,
+	header nav#MembersNav ul li,
+	header nav#MembersNav ul li a {
+		text-align: center;
+		display: inline-block;
+	}
+
+
+	header nav#MembersNav #MembersNavLogIn form {
+		z-index: 2;
+	}
+
+	header #SocialMedia {
+		display: none;
+	}
 
 	footer #FooterContent {
 		width: 90%;
@@ -534,16 +665,35 @@ article #PageLogInForm input[type='password'] {
 		position: static;
 	}
 
-	article .largeCol {
+	article .largeCol,
+	article .smallCol {
 		width: 90%;
 		padding: 0 5%;
 	}
 
+	article .largeCol .last {
+		padding-bottom: 40px;
+	}
+	
+	article .largeCol .teaserBox {
+		border-bottom: 1px solid #c3c2bf;
+	}
+
 	article .largeCol .teaserContent {
-		width: auto;
 		float: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	article .largeCol a.teaserImage {
+		float: none;
+		display: block;
+	}
+
+	article .largeCol a.teaserImage img {
+		float: none;
+		display: block;
+		margin: 0 0 25px 0;
 	}
 
 	article .largeCol img {
@@ -563,26 +713,133 @@ article #PageLogInForm input[type='password'] {
 		float: left;
 	}
 
+	article #WeatherInfo {
+		width: 100%;
+		text-align: center;
+	}
+
 }
 
 @media only screen and (max-width: 850px) {
+	
+	article .teaserBox {
+		padding-bottom: 0;
+	}
 
+	article .largeCol a.teaserImage {
+		float: left;
+		display: inline;
+		margin: 0 25px 0 0;
+	}
+
+	article .largeCol a.teaserImage img {
+		float: left;
+		display: inline;
+	}
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 540px) {
+	article .largeCol a.teaserImage {
+		float: none;
+		display: block;
+	}
 
+	article .largeCol a.teaserImage img {
+		float: none;
+		display: block;
+		margin: 0 0 25px 0;
+	}
 }
 
+@media only screen and (max-width: 340px) {
 
-@media only screen and (max-width: 645px) {
+	header nav#MainNav ul li a {
+		margin: 0 10px;
+		font-size: 12px;
+	}
 
-}
+	header nav#MembersNav ul li {
+		float: none;	
+	}
+
+	header nav#MembersNav ul li a:last-child {
+		border-right: none;	
+	}
+
+	header nav#MembersNav span {
+		display: none;
+	}
+
+	header nav#MembersNav #MembersNavLogIn form {
+		top: -8px;
+		right: 1%;
+		background: #f3d93c;
+		width: 94%;
+		padding: 8px 2%;
+		border-radius: 6px;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-o-border-radius: 6px;
+		box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+		-webkit-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+		-o-box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	footer #FooterContent ul {
+		border-bottom: 1px solid #454274;
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+	}
+
+	footer #FooterContent ul.first li {
+		float: left;
+		width: 100%;
+		border-right: none;
+	}
+
+	footer #FooterContent ul li {
+		float: left;
+		width: 48%;
+		border-right: none;
+		margin: 0;
+	}
+
+	footer #FooterContent ul.first li a {
+		padding: 0;
+	}
+
+	footer #FooterContent ul li a {
+		display: block;
+		padding: 8px;
+		text-align: center;
+	}
+
+	footer #FooterContent ul li.first {
+		float: left;
+		width: 100%;
+		border-right: none;
+	}
 
 
-@media only screen and (max-width: 620px) {
+	h1 {
+		font-size: 38px;
+		line-height: 38px;
+	}
 
-}
+	article .mainFeature h2 {
+		line-height: 28px;
+	}
 
-@media only screen and (max-width: 485px) {
+	article .mainFeature,
+	article .highlightContent {
+		padding: 20px;
+	}
+
+	article #BBCWeather {
+		width: 100%;
+		overflow: hidden;
+		text-align: center;
+	}
 
 }

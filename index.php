@@ -2,11 +2,12 @@
 <html lang="en"> 
 
 <head> 
-	<title>Alouette Flying Club - Based at Biggin Hill - We put the fun back into flying</title>
+	<title><?php echo strpos($_SERVER['HTTP_USER_AGENT'], 'iP')?'Alouette': 'Alouette Flying Club - Based at Biggin Hill - We put the fun back into flying'; ?></title>
 	
-	<meta name="description" content="Desctiption here" />
-	<meta name="keywords" content="Keywords here" />
+	<meta name="description" content="Alouette Flying Club - We put the fun back into flying - Based at Biggin Hill, Alouette is a flying club run by the members for the members offering PPL training." />
+	<meta name="keywords" content="Alouette, Flying, Club, Biggin Hill, Biggin, Hill, Student, Pilot, Members, Kent, Cessna, Piper, Training, PPL" />
 	<?php include "common/page-head.php"; ?>
+    <link href="css/base.css" rel="stylesheet" media="screen" type="text/css">
     <script type="text/javascript" language="javascript" src="js/jquery.cross-slide.min.js"></script>
     
 </head>
@@ -15,10 +16,11 @@
 <body>
 
 
-<?php $TabName = "Home"; include "common/header.php"; ?>
+<?php $TabName = "Home"; ?>
+<?php include "common/header.php"; ?>
 
 <article>
-	<div class="mainFeature">
+	<div class="mainFeature clear">
             <div id="HomeMainFeatureImages" class="mainFeatureImages">
                 <!-- -->
             </div>
@@ -31,13 +33,13 @@
             </div>
     </div>
 
-    <div class="clear">
+    
         <div class="largeCol">
 
             <div class="teaserBox clear">
 
-                <a href="/Trial-flights" title="Trial flights with Alouette">
-                    <img src="../images/home/trial_flights.jpg" width="255" height="186" alt="Trial flights with Alouette" />
+                <a href="/Trial-flights" title="Trial flights with Alouette" class="teaserImage">
+                    <img src="images/home/trial_flights.jpg" width="255" height="186" alt="Trial flights with Alouette" />
                 </a>
 
                 <div class="teaserContent">
@@ -50,8 +52,8 @@
 
             <div class="teaserBox last clear">
 
-                <a href="/Alouette-news" title="The latest Alouette news">
-                    <img src="../images/home/members.jpg" width="255" height="186" alt="The latest Alouette news" />
+                <a href="/Alouette-news" title="The latest Alouette news" class="teaserImage">
+                    <img src="images/home/members.jpg" width="255" height="186" alt="The latest Alouette news" />
                 </a>
 
                 <div class="teaserContent">
@@ -65,9 +67,15 @@
         </div>
 
         <div class="smallCol">
-            Column 2
+            <div id="WeatherInfo">
+                <h2>Biggin Hill Weather</h2>
+                <div id="BBCWeather">
+                    <iframe src="http://news.bbc.co.uk/weather/forecast/2098/Next3DaysEmbed.xhtml?target=_parent" allowTransparency="true" width="306" height="435" frameborder="0"></iframe>
+                </div>
+            </div>
         </div>
-    </div>
+
+
     
     <?php include "common/online-booking-login.php"; ?>
 

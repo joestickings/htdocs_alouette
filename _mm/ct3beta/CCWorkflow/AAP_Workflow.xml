@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow id="AAP" name="Author => Approve => Publish" description="Author => Approve => Publish">
+	<task id="AAPT1" name="Author">
+		<actions>
+			<action id="AAPT1A1" name="Send for Edit" type="SEND" goto="AAPT2"/>
+			<action id="AAPT1A2" name="Send for Approval" type="SEND"
+			goto="AAPT5"/>
+		</actions>
+	</task>
+	<task id="AAPT2" name="Wait for Edit">
+		<actions>
+			<action id="AAPT2A1" name="Edit Draft" type="EDIT" goto="AAPT3">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT2A2" name="Delete Draft" type="DELETE">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT2A3" name="Undo Send" type="UNDO" goto="AAPT4">
+				<preconditions>
+					<precondition>$user == sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT2A4" name="Return" type="RETURN" goto="AAPT4">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+		</actions>
+	</task>
+	<task id="AAPT3" name="Edit Draft">
+		<actions>
+			<action id="AAPT3A1" name="Edit Done" type="RETURN" goto="AAPT4">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+		</actions>
+	</task>
+	<task id="AAPT4" name="To Send for Approval">
+		<actions>
+			<action id="AAPT4A1" name="Send for Approval" type="SEND" goto="AAPT5"/>
+			<action id="AAPT4A2" name="Edit Draft" type="EDIT" goto="AAPT1"/>
+			<action id="AAPT4A3" name="Delete Draft" type="DELETE"/>
+		</actions>
+	</task>
+	<task id="AAPT5" name="Wait for Approval">
+		<actions>
+			<action id="AAPT5A1" name="Approve" type= "RETURN" result="TRUE" goto="AAPT6">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT5A2" name="Reject" type="RETURN" result="FALSE" goto="AAPT4">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT5A3" name="Undo Send" type="UNDO" goto="AAPT4">
+				<preconditions>
+					<precondition>$user == sender</precondition>
+				</preconditions>
+			</action>
+		</actions>
+	</task>
+	<task id="AAPT6" name="To Send for Publish">
+		<actions>
+			<action id="AAPT6A1" name="Send for Publish" type="SEND" goto="AAPT7">
+				<preconditions>
+					<precondition>$role != publisher</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT6A2" name="Publish" type="PUBLISH" >
+				<preconditions>
+					<precondition>$role == publisher</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT6A3" name="Edit Draft" type="EDIT" goto="AAPT1"/>
+			<action id="AAPT6A4" name="Delete Draft" type="DELETE"/>
+		</actions>
+	</task>
+	<task id="AAPT7" name="Wait for Publish">
+		<actions>
+			<action id="AAPT7A1" name="Publish" type= "PUBLISH">
+				<preconditions>
+					<precondition>$role == publisher</precondition>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT7A2" name="Return" type="RETURN" goto="AAPT6">
+				<preconditions>
+					<precondition>$user != sender</precondition>
+				</preconditions>
+			</action>
+			<action id="AAPT7A3" name="Undo Send" type="UNDO" goto="AAPT6">
+				<preconditions>
+					<precondition>$user == sender</precondition>
+				</preconditions>
+			</action>
+		</actions>
+	</task>
+</workflow>

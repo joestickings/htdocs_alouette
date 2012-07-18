@@ -31,6 +31,24 @@ $(document).ready(function(){
 		$(this).slideUp();
 	});
 
+	//HEADER - Responsive Menu
+	$("#ShowMenuButton").click(function(){
+			
+			if($("#MainNav ul").is(":visible"))
+			{
+				$("#MainNav ul").slideUp(function(){
+					$("#MainNav ul").removeAttr("style");
+				});
+				$(this).html('Show main menu <span class="icon plus"><!-- --></span>');
+				
+			}
+			else {
+				$("#MainNav ul").slideDown();
+				$(this).html('Hide main menu <span class="icon minus"><!-- --></span>');
+			}
+	
+	});
+
 	//FOOTER - Open members log in
 	$("#FooterOnlineBooking").click(function(){
 		

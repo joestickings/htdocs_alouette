@@ -1,7 +1,7 @@
 <header>
 	
     <div id="HeaderContent">
-        <a href="#">
+        <a href="#" id="Logo">
             <img src="../images/core/logo.gif" width="212" height="66" alt="Alouette Flying Club" />
             <img src="../images/core/logo_text.gif" width="134" height="36" alt="Established 1959 Based at Biggin Hill" id="LogoText" />
         </a>
@@ -10,7 +10,7 @@
 
             <span>Members area:</span>
 
-            <ul class="clear">
+            <ul>
                 <li><a href="#">Latest news</a></li>
                 <li><a href="#">Accounts</a></li>
                 <li><a href="#">Bookings</a></li>
@@ -74,9 +74,11 @@
 
     <nav id="MainNav">
 
+            <button id="ShowMenuButton">Show main menu <span class="icon plus"><!-- --></span></button>
+
     		<ul>
-            	<li <?php if($TabName == "Home") { ?>class="selected"<?php } ?>><a href="#">Home</a></li>
-                <li <?php if($TabName == "About us") { ?>class="selected"<?php } ?>><a href="#">About us</a></li>
+            	<li <?php if($TabName == "Home") { ?>class="selected"<?php } ?>><a href="/home">Home</a></li>
+                <li <?php if($TabName == "About us") { ?>class="selected"<?php } ?>><a href="/about-us">About us</a></li>
                 <li <?php if($TabName == "Trial flights") { ?>class="selected"<?php } ?>><a href="#">Trial flights</a></li>
                 <li <?php if($TabName == "Achievements") { ?>class="selected"<?php } ?>><a href="#">Achievements</a></li>
                 <li <?php if($TabName == "Aircraft") { ?>class="selected"<?php } ?>><a href="#">Aircraft</a></li>

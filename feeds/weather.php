@@ -9,6 +9,7 @@
 
 <body>
 
+<div id="WeatherFeedContent">
 <?php	
 	
 	error_reporting(0);
@@ -19,7 +20,7 @@
 	   return $dirs[round($b/45)];
 	}
 
-	$xmlPath = "http://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&stationString=EGKB&hoursBeforeNow=10&mostRecent=true";
+	$xmlPath = "http://aviationweather.gov.dd/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&stationString=EGKB&hoursBeforeNow=10&mostRecent=true";
 	$xmlData = simplexml_load_file($xmlPath);
 
 
@@ -43,6 +44,9 @@
 		$getWindSpeedKnots = $xmlData->xpath("/response/data/METAR[1]/wind_speed_kt");
 		$getWindSpeedMPH = number_format(((int)$getWindSpeedKnots[0] * 1.15077945),0);
 
+		$getWindGustSpeedKnots = $xmlData->xpath("/response/data/METAR[1]/wind_gust_kt");
+		$getWindGustSpeedMPH = number_format(((int)$getWindGustSpeedKnots[0] * 1.15077945),0);
+
 		$getVisibilityMiles = $xmlData->xpath("/response/data/METAR[1]/visibility_statute_mi");
 		$getVisibilityKm = number_format(((int)$getVisibilityMiles[0] * 1.609344),0);
 
@@ -65,32 +69,36 @@
 	
 ?>
 
-<br />
-Observed at: <strong><?php echo $getObservationDate->format('H:i').' on '.$getObservationDate->format('l jS F Y'); ?></strong>
-<br />
-Temperature: <strong><?php echo $getTemperature[0]; ?>&deg;C (<?php echo $getTemperatureFarenheit; ?>&deg;F)</strong>
-<br />
-Dewpoint: <strong><?php echo $getDewpoint[0]; ?>&deg;C (<?php echo $getDewpointFarenheit; ?>&deg;F)</strong>
-<br />
-Pressure (altimiter): <strong><?php echo number_format((float)$getPressure[0],2); ?> inches Hg (<?php echo $getPressureMb; ?> mb)</strong>
-<br />
-Winds: <strong>From the <?php echo $getWindDirectionBearing; ?> (<?php echo $getWindDirectionDegrees[0]; ?>&deg;) at <?php echo $getWindSpeedKnots[0]; ?> knots (<?php echo $getWindSpeedMPH[0]; ?> mph)</strong>
-<br />
-Visibility: <strong><?php echo number_format((float)$getVisibilityMiles[0],0); ?> or more miles (<?php echo $getVisibilityKm; ?>+ km)</strong>
-<br />
-Ceiling: <strong><?php echo $getCloudCeiling; ?> feet</strong>
-<br />
-<br />
+<ul>
+	<li><strong>Observation date:</strong><?php echo $getObservationDate->format('l jS F Y'); ?></li>
+	<li><strong>Observation time:</strong><?php echo $getObservationDate->format('H:i'); ?></li>
+	<li><strong>Temperature:</strong><?php echo $getTemperature[0]; ?>&deg;C (<?php echo $getTemperatureFarenheit; ?>&deg;F)</li>
+	<li><strong>Dewpoint:</strong><?php echo $getDewpoint[0]; ?>&deg;C (<?php echo $getDewpointFarenheit; ?>&deg;F)</li>
+	<li><strong>Pressure (altimiter):</strong><?php echo number_format((float)$getPressure[0],2); ?> inches Hg (<?php echo $getPressureMb; ?> mb)</li>
+	<li>
+		<strong>Winds:</strong> 
+		From the <?php echo $getWindDirectionBearing; ?> (<?php echo $getWindDirectionDegrees[0]; ?>&deg;) 
+		at <?php echo $getWindSpeedKnots[0]; ?> knots (<?php echo $getWindSpeedMPH; ?> mph) 
+		<?php if(isset($getWindGustSpeedKnots[0])) { ?>
+		gusting to <?php echo $getWindGustSpeedKnots[0]; ?> knots (<?php echo $getWindGustSpeedMPH; ?> mph)
+		<?php } ?>
+	</li>
+	<li><strong>Visibility:</strong><?php echo number_format((float)$getVisibilityMiles[0],0); ?> or more miles (<?php echo $getVisibilityKm; ?>+ km)</li>
+	<li><strong>Ceiling:</strong><?php echo $getCloudCeiling; ?> feet</li>
 	<?php for($i = 0; $i < $getNumberOfCloudReports; $i++) { ?>
-		Coluds: <strong><?php echo $cloudDefinitions["$getNumberOfCloudReportsSkyCover[$i]"]; ?> at <?php echo $getNumberOfCloudReportsCloudBase[$i]; ?> feet</strong>
-		<br />
+		<li>
+		<strong>Coluds:</strong><?php echo $cloudDefinitions["$getNumberOfCloudReportsSkyCover[$i]"]; ?> at <?php echo $getNumberOfCloudReportsCloudBase[$i]; ?> feet
+		</li>
 	<?php } ?>
+
+</ul>
 
 
 <?php } else { ?>
 <iframe src="http://news.bbc.co.uk/weather/forecast/2098/Next3DaysEmbed.xhtml?target=_parent" allowTransparency="true" width="306" height="435" frameborder="0"></iframe>
 <?php } ?>
 
+</div>
 </body> 
 
 

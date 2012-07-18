@@ -1,4 +1,4 @@
-<form id="PageLogInForm" method="post" action="http://213.239.220.199/aero-vor.ch/pro/lib/cgi-bin/login.cgi" name="pageForm" target="_blank" class="highlightContent">
+<form id="PageLogInForm" method="post" action="http://213.239.220.199/aero-vor.ch/pro/lib/cgi-bin/login.cgi" name="pageForm" target="_blank" class="highlightContent clear">
       <h2>Members online booking system</h2>
       <p>Alouette full flying members can log into the online booking system to reserve one of the club’s aircraft.</p>
 
