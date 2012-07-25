@@ -79,12 +79,12 @@
     		<ul>
             	<li <?php if($TabName == "Home") { ?>class="selected"<?php } ?>><a href="/home">Home</a></li>
                 <li <?php if($TabName == "About us") { ?>class="selected"<?php } ?>><a href="/about-us">About us</a></li>
-                <li <?php if($TabName == "Trial flights") { ?>class="selected"<?php } ?>><a href="#">Trial flights</a></li>
-                <li <?php if($TabName == "Achievements") { ?>class="selected"<?php } ?>><a href="#">Achievements</a></li>
-                <li <?php if($TabName == "Aircraft") { ?>class="selected"<?php } ?>><a href="#">Aircraft</a></li>
+                <li <?php if($TabName == "Trial flights") { ?>class="selected"<?php } ?>><a href="/trial-flights">Trial flights</a></li>
+                <li <?php if($TabName == "Aircraft") { ?>class="selected"<?php } ?>><a href="/aircraft">Aircraft</a></li>
                 <li <?php if($TabName == "FAQ's") { ?>class="selected"<?php } ?>><a href="#">FAQ's</a></li>
                 <li <?php if($TabName == "Learning") { ?>class="selected"<?php } ?>><a href="#">Learning</a></li>
                 <li <?php if($TabName == "The Committee") { ?>class="selected"<?php } ?>><a href="#">The Committee</a></li>
+                <li <?php if($TabName == "Achievements") { ?>class="selected"<?php } ?>><a href="#">Achievements</a></li>
                 <li <?php if($TabName == "Weather") { ?>class="selected"<?php } ?>><a href="#">Weather</a></li>
                 <li <?php if($TabName == "Links") { ?>class="selected"<?php } ?>><a href="#">Links</a></li>
                 <li <?php if($TabName == "Find us") { ?>class="selected last"<?php } else { ?>class="last"<?php } ?>><a href="#">Find us</a></li>
@@ -96,9 +96,13 @@
 
 
 <?php
-if(preg_match('/(?i)msie [1-6]/',$_SERVER['HTTP_USER_AGENT'])) {
-   echo '<div id="IEMessage"><section class="gridWidth">Your are currently viewing my web site in version <strong>6</strong> of <strong>Internet Explorer</strong>.<br />For a better experience I suggest upgrading to version <strong>7</strong> or greater.<br />For the best experience <strong>Mozilla Firefox</strong>, <strong>Google Chrome</strong> or <strong>Safari</strong> are the internet browsers for you.</section></div>';
-  }
+if(preg_match('/(?i)msie [1-6]/',$_SERVER['HTTP_USER_AGENT'])) { ?>
+   <div id="IEMessage">
+        <button>Close</button>
+        <div class="heading">You are currently viewing the Alouette web site in version 6 of Internet Explorer</div>
+        <p>For a better experience we suggest upgrading to version 7 or greater.</p>
+        <p>For the best possible experience we strongly suggest using <strong>Mozilla Firefox</strong>, <strong>Google Chrome</strong> or <strong>Safari</strong>.</p>
+   </div>
+<?php  } ?>
 
 
-?>

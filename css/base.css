@@ -55,6 +55,11 @@ select {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	color: #1d1b40;
+	font-size: 14px;
+}
+
+button {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type='text'],input[type='button'], input[type='submit'] {
@@ -338,7 +343,8 @@ footer #FooterContent ul {
 	display: block;
 }
 
-footer #FooterContent ul.first {
+footer #FooterContent ul.first,
+footer #FooterContent ul.space {
 	margin-bottom: 12px;
 }
 
@@ -372,21 +378,63 @@ footer #FooterContent ul li a {
 	color:  #fff;
 }
 
+footer #FooterContent #AcceptLabel {
+	position: relative;
+	top: -4px;
+	margin-right: 4px;
+}
+
 /* FOOTER -> Hover state */
 
 footer #FooterContent a:hover {
 	color: #f3d93c;
 }
 
+/* IE6 MESSAGE */
+#IEMessage {
+	width: 906px;
+	margin: 0 auto;
+	background: #f3d93c;
+	padding: 25px;
+	margin-top: 25px;
+	border: 2px solid #1d1b40;
+	position: relative;
+}
+
+#IEMessage .heading {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	word-spacing: 0.15em;
+	margin-bottom: 16px;
+}
+
+#IEMessage p {
+	margin: 0;
+}
+
+#IEMessage button {
+	width: 19px;
+	height: 19px;
+	background: url('../images/misc/ie6_close.gif') no-repeat top left;
+	border: none;
+	text-indent: -9999px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
 /* MAIN PAGE CONTENT */
 
 h1 {
-	font-size: 48px;
-	line-height: 48px;
+	font-size: 36px;
+	line-height: 36px;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: -2px;
-	word-spacing: 0.15em;
+	letter-spacing: -1px;
+	word-spacing: 0.25em;
 	margin-bottom: 16px;
 }
 
@@ -400,8 +448,8 @@ h2 {
 }
 
 p {
-	line-height: 20px;
-	margin-bottom: 16px;
+	line-height: 18px;
+	margin-bottom: 20px;
 }
 
 article {
@@ -410,11 +458,77 @@ article {
 	padding: 25px 0;
 }
 
+article ul {
+	line-height: 20px;
+	margin: 0 0 16px 16px;
+}
+
 article .highlightContent {
 	background: url('../images/core/feature_bkg.gif') repeat top left;
 	padding: 30px;
 	display: block;
 	clear: both;
+}
+
+article .textCenter {
+	text-align: center;
+}
+
+article .price {
+	font-weight: bold;
+	font-size: 25px;
+	margin-top: 4px;
+}
+
+article .utilityCol .highlightContent {
+	margin-bottom: 25px;
+}
+
+article .formCol .highlightContent {
+	margin-bottom: 1px;
+}
+
+article .formCol label {
+	display: block;
+	margin-bottom: 4px;
+}
+
+article .formCol select {
+	display: block;
+	width: 100%;
+	margin-bottom: 4px;
+}
+
+article .formCol input {
+	display: block;
+	width: 97%;
+	margin-bottom: 4px;
+}
+
+article .formCol input.button {
+	margin-bottom: 20px;
+}
+
+article .smallText {
+	font-size: 12px;
+}
+
+article .noBottomMargin {
+	margin-bottom: 0;
+}
+
+
+article .formCol .twoCol {
+	float: left;
+	width: 50%;
+	display: inline;
+	vertical-align: bottom;
+}
+
+article .formCol .price {
+	float: left;
+	width: 50%;
+	text-align: right;
 }
 
 article .mainFeature {
@@ -442,6 +556,13 @@ article .mainFeature .mainFeatureContent {
 	left: 542px;
 }
 
+article .mainFeature .mainFeatureContent h1 {
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -2px;
+	word-spacing: 0.15em;
+}
+
 article .mainFeature .mainFeatureImages {
 	position: absolute;
 	float: left;
@@ -464,7 +585,45 @@ article .largeCol {
 	margin: 0 40px 40px 0;
 }
 
-article .largeCol img {
+article .rightImage {
+	float: right;
+	display: inline;
+	background: #fff;
+	padding: 5px;
+	margin: 0 0 25px 25px;
+	border: 1px solid #c5c3c3;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+article .imageBorder {
+	display: inline;
+	background: #fff;
+	padding: 5px;
+	margin: 0 0 25px 25px;
+	border: 1px solid #c5c3c3;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+article .heroImage {
+	display: block;
+	background: #fff;
+	padding: 6px;
+	margin: 0 auto 25px auto;
+	text-align: center;
+	border: 1px solid #c5c3c3;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+article .largeCol .teaserBox img {
 	float: left;
 	display:  inline;
 	background: #fff;
@@ -511,6 +670,37 @@ article #PageLogInForm input[type='password'] {
 	width: 234px;
 }
 
+article .errorMessage {
+	display: none;
+	border: 2px solid #c00;
+	color: #c00;
+	background: #F1E7E7;
+	font-size: 12px;
+	padding: 8px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-o-border-radius: 6px;
+	margin-bottom: 8px; 
+}
+
+article ul.aircraftGallery {
+	list-style-type: none;
+	margin: 0 0 25px 0;
+}
+
+article ul.aircraftGallery li {
+	display: inline;
+}
+
+article ul.aircraftGallery li a {
+	display: inline;
+	border: none;
+}
+
+article ul.aircraftGallery li a img {
+	margin: 0 4px 8px 4px;
+}
 
 @media only screen and (max-width: 950px) {
 
@@ -693,12 +883,7 @@ article #PageLogInForm input[type='password'] {
 	article .largeCol a.teaserImage img {
 		float: none;
 		display: block;
-		margin: 0 0 25px 0;
-	}
-
-	article .largeCol img {
-		margin-right: 25px;
-		margin-bottom: 10px;
+		margin: 0 0 8px 0;
 	}
 
 	article #PageLogInForm input[type='text'],
@@ -738,6 +923,15 @@ article #PageLogInForm input[type='password'] {
 	}
 }
 
+@media only screen and (max-width: 650px) {
+
+	article .heroImage {
+		width: 95%;
+		height: auto;
+	}
+
+}
+
 @media only screen and (max-width: 540px) {
 	article .largeCol a.teaserImage {
 		float: none;
@@ -749,6 +943,7 @@ article #PageLogInForm input[type='password'] {
 		display: block;
 		margin: 0 0 25px 0;
 	}
+
 }
 
 @media only screen and (max-width: 340px) {

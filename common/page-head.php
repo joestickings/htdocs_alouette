@@ -12,10 +12,6 @@
 <link rel="apple-touch-icon-precomposed" href="images/icons/114x114.png" sizes="114x114"/>
 <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico"/>
 
-<!--[if lt IE 9]>
-	<link href="css/ie.css" rel="stylesheet" media="screen" type="text/css">
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 <script type="text/javascript" language="javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" language="javascript" src="js/base.js"></script>
 
