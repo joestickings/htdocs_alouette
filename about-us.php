@@ -27,7 +27,7 @@
 
         <h1>About us</h1>
         <p>Alouette is, first and foremost, a club which is run for the members, by the members. We have no employees which keeps our overheads low and allows us to keep the cost of flying down, an all-important consideration in these days of rising prices. Our flying rates are still among the cheapest in the South East of England!</p>
-        <img src="images/about-us/hero.jpg" width="590" height="320" alt="About Alouette" class="heroImage" />
+        <img src="images/about-us/hero_sign.jpg" width="590" height="320" alt="About Alouette" class="heroImage" />
         <p>You can join Alouette as a social member, a student or as a qualified pilot but whatever level you choose, you can be sure of a very warm welcome.</p>        
         <p>Our members range in age from early teens to - well let's just say 'mature'. Some have been flying for many years, others are newly qualified. But they all have one thing in common - they love flying.</p>
         <img src="images/about-us/social.jpg" width="255" height="186" alt="Alouette club grub evening" class="rightImage"/>
@@ -38,7 +38,7 @@
         <p>We have a range of highly qualified and experienced instructors and can provide training on most days of the week, and at weekends. We love to welcome like-minded folk who wish to participate in the running of the club, as well as enjoy their flying.</p>
         <img src="images/misc/aopa.gif" width="74" height="60" alt="Alouette is a corporate member of AOPA" class="rightImage"/>
         <p>Alouette is a corporate member of AOPA, the Aircraft Owners and Pilots Association, so you can be assured of high quality flight training and value for money.</p>
-        <p>We hope you will join us - why not try a <a href="#" title="Alouette trial flights">trial lesson</a>?</p>
+        <p>We hope you will join us - why not try a <a href="/trial-flights" title="Alouette trial flights">trial lesson</a>?</p>
         <p>For more information, email <a href="mailto:secretary@alouette.org.uk">secretary@alouette.org.uk</a></p>
     </div>
 

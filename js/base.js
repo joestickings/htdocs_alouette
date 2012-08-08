@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	//MOBILE LINKS
+	if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
+		    $("a").click(function (event) {
+		    event.preventDefault();
+		    window.location = $(this).attr("href");
+		});
+	}
+
 	//ANIMATED ANCHOR
 	$.fn.extend({
 	animateAnchor: function() {	
@@ -116,6 +124,11 @@ $(document).ready(function(){
 	//AIRCRAFT - PHOTO GALLERY
 	try {
 		$(".aircraftGallery a[rel^='photoGallery']").prettyPhoto({animation_speed:'normal',slideshow:5000, autoplay_slideshow: true, hideflash: true});
+	} catch(e) {}
+
+	//VIDEO DIARY - PLAY VIDEO
+	try{
+		$("a[rel^='videoDiary']").prettyPhoto();
 	} catch(e) {}
 
 });

@@ -1,7 +1,7 @@
 <header>
 	
     <div id="HeaderContent">
-        <a href="#" id="Logo">
+        <a href="/index" id="Logo" title="Alouette Flying Club">
             <img src="../images/core/logo.gif" width="212" height="66" alt="Alouette Flying Club" />
             <img src="../images/core/logo_text.gif" width="134" height="36" alt="Established 1959 Based at Biggin Hill" id="LogoText" />
         </a>
@@ -11,7 +11,7 @@
             <span>Members area:</span>
 
             <ul>
-                <li><a href="#">Latest news</a></li>
+                <li><a href="/alouette-news">Latest news</a></li>
                 <li><a href="#">Accounts</a></li>
                 <li><a href="#">Bookings</a></li>
                 <li><button>Online booking</button></li>
@@ -29,9 +29,30 @@
                     <label for="OnlineBookingPassword">Password</label>
                     <input type="password" id="OnlineBookingPassword" name="Password" size="15" value="" />
 
+                    <a href="http://213.239.220.199/aero-vor.ch/pro/lib/cgi-bin/login.cgi?action=Form&company=alouette_flying_club" target="_blank" id="ForgotPassword">Forgot your password?</a>
+
                     <input type="submit" class="button" value="Log in" />
                     <button id="MembersNavClose">Close</button>
+
+                    
+                    <textarea id="TermsBox" rows="10" cols="40" wrap="virtual" readonly="readonly">
+Only instructors and current Full Flying members of Alouette are permitted to log into this system.
+
+Members are expected to abide by the rules of the club and are reminded that:
+
+1. You may not book more than two time slots at any one time, in fact the system prevents this.
+
+2. If taking an aircraft for a whole day, or more, a minimum tacho time of 2 hours per day should be flown. This may be averaged over a number of days, if appropriate. For instance on a 3 day trip, 6 hours tacho time should be flown in total.
+
+3. If you wish to take an aircraft for a trip that involves an overnight stay, please talk to the booking service administrator first.
+
+4. Please remember to cancel any bookings you can no longer honour.
+
+Alouette Flying Club does not take any responsibility for any loss, damage or other problem caused by use of this system. Users therefore make use of the system entirely at their own risk.
+                    </textarea>
+
                 </form>
+
             </div>
         </nav>
 
@@ -77,17 +98,17 @@
             <button id="ShowMenuButton">Show main menu <span class="icon plus"><!-- --></span></button>
 
     		<ul>
-            	<li <?php if($TabName == "Home") { ?>class="selected"<?php } ?>><a href="/home">Home</a></li>
+            	<li <?php if($TabName == "Home") { ?>class="selected"<?php } ?>><a href="/index">Home</a></li>
                 <li <?php if($TabName == "About us") { ?>class="selected"<?php } ?>><a href="/about-us">About us</a></li>
                 <li <?php if($TabName == "Trial flights") { ?>class="selected"<?php } ?>><a href="/trial-flights">Trial flights</a></li>
                 <li <?php if($TabName == "Aircraft") { ?>class="selected"<?php } ?>><a href="/aircraft">Aircraft</a></li>
-                <li <?php if($TabName == "FAQ's") { ?>class="selected"<?php } ?>><a href="#">FAQ's</a></li>
-                <li <?php if($TabName == "Learning") { ?>class="selected"<?php } ?>><a href="#">Learning</a></li>
-                <li <?php if($TabName == "The Committee") { ?>class="selected"<?php } ?>><a href="#">The Committee</a></li>
-                <li <?php if($TabName == "Achievements") { ?>class="selected"<?php } ?>><a href="#">Achievements</a></li>
-                <li <?php if($TabName == "Weather") { ?>class="selected"<?php } ?>><a href="#">Weather</a></li>
-                <li <?php if($TabName == "Links") { ?>class="selected"<?php } ?>><a href="#">Links</a></li>
-                <li <?php if($TabName == "Find us") { ?>class="selected last"<?php } else { ?>class="last"<?php } ?>><a href="#">Find us</a></li>
+                <li <?php if($TabName == "Weather") { ?>class="selected"<?php } ?>><a href="/weather">Weather</a></li>
+                <li <?php if($TabName == "FAQ's") { ?>class="selected"<?php } ?>><a href="/faq">FAQ's</a></li>
+                <li <?php if($TabName == "Learning") { ?>class="selected"<?php } ?>><a href="/learning">Learning</a></li>
+                <li <?php if($TabName == "The Committee") { ?>class="selected"<?php } ?>><a href="/committee">The Committee</a></li>
+                <li <?php if($TabName == "Achievements") { ?>class="selected"<?php } ?>><a href="/achievements">Achievements</a></li>
+                <li <?php if($TabName == "Links") { ?>class="selected"<?php } ?>><a href="/links">Links</a></li>
+                <li <?php if($TabName == "Find us") { ?>class="selected last"<?php } else { ?>class="last"<?php } ?>><a href="/find-us">Find us</a></li>
             </ul>  
 
     </nav>

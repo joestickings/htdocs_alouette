@@ -103,7 +103,7 @@ a:hover.button {
 /* HEADER */
 header {
 	width: 100%;
-	background: #3b3869 url('../images/core/header_bkg.gif') repeat-x bottom left;
+	background: #3b3869 url('../images/core/header_bkg.jpg') repeat-x bottom left;
 	padding: 0 0 6px 0;
 }
 
@@ -111,7 +111,8 @@ header #HeaderContent {
 	width: 960px;
 	margin: 0 auto;
 	padding: 15px 0;
-	position:  relative;
+	position: relative;
+	z-index: 1;
 }
 
 header #HeaderContent img#LogoText {
@@ -125,7 +126,7 @@ header nav#MainNav {
 	width: 100%;
 	margin: 0;
 	padding: 3px 0 0 0;
-	background: #1c193e url('../images/core/nav_bkg.gif') repeat-x top left;
+	background: #1c193e url('../images/core/nav_bkg.jpg') repeat-x top left;
 }
 
 header nav#MainNav ul {
@@ -247,6 +248,7 @@ header nav#MembersNav ul li a {
 
 header nav#MembersNav #MembersNavLogIn {
 	position: relative;
+	z-index: 1;
 	width: 100%;
 	float: left;
 	display: inline;
@@ -295,9 +297,30 @@ header nav#MembersNav #MembersNavLogIn form #MembersNavClose {
 	font-size: 12px;
 	font-weight: normal;
 	float: right;
+	outline: none;
+	color: #454274;
+	text-decoration: none;
+}
+
+header nav#MembersNav #MembersNavLogIn form #MembersNavClose:hover {
+	color: #454274;
+	text-decoration: underline;
 }
 
 
+header nav#MembersNav #MembersNavLogIn form #ForgotPassword {
+	float: left;
+	display: inline;
+	margin-top: 6px;
+}
+
+header nav#MembersNav #MembersNavLogIn form #TermsBox {
+	width: 278px; 
+	height: 169px; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-top: 16px;
+}
 
 /* HEADER -> Social Media */
 header #SocialMedia {
@@ -322,7 +345,7 @@ header nav#MembersNav ul li a:hover {
 
 footer {
 	width: 100%;
-	background: #1e1c3f url('../images/core/footer_bkg.gif') repeat-x top left;
+	background: #1e1c3f url('../images/core/footer_bkg.jpg') repeat-x top left;
 	padding: 8px 0;
 	margin: 0;
 	color: #fff;
@@ -440,12 +463,34 @@ h1 {
 
 h2 {
 	font-size: 25px;
+	line-height: 28px;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	word-spacing: 0.15em;
 	margin-bottom: 16px;
 }
+
+h3 {
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	word-spacing: 0.15em;
+	margin-bottom: 16px;
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	word-spacing: 0.15em;
+	margin-bottom: 16px;
+}
+
 
 p {
 	line-height: 18px;
@@ -461,6 +506,12 @@ article {
 article ul {
 	line-height: 20px;
 	margin: 0 0 16px 16px;
+}
+
+article .contentFeature {
+	background: url('../images/core/highlight_bkg.gif') repeat top left;
+	padding: 30px;
+	display: block;
 }
 
 article .highlightContent {
@@ -480,6 +531,18 @@ article .price {
 	margin-top: 4px;
 }
 
+article .pdf {
+	background: url('../images/misc/pdf.gif') no-repeat top left;
+	padding-left: 30px;
+	display: block;
+	text-align: left;
+}
+
+article .twoColForm.contentFeature {
+	margin-bottom: 40px;
+}
+
+article .utilityCol .contentFeature,
 article .utilityCol .highlightContent {
 	margin-bottom: 25px;
 }
@@ -488,17 +551,20 @@ article .formCol .highlightContent {
 	margin-bottom: 1px;
 }
 
+article .twoColForm label,
 article .formCol label {
 	display: block;
 	margin-bottom: 4px;
 }
 
+article .twoColForm select,
 article .formCol select {
 	display: block;
 	width: 100%;
 	margin-bottom: 4px;
 }
 
+article .twoColForm input,
 article .formCol input {
 	display: block;
 	width: 97%;
@@ -507,6 +573,25 @@ article .formCol input {
 
 article .formCol input.button {
 	margin-bottom: 20px;
+}
+
+article .twoColForm input.button {
+	float: left;
+	clear: both;
+	display: inline;
+	width: auto;
+	margin: 10px 20px 0 0;
+}
+
+article .twoColForm img.paymentOptions {
+	float: left;
+	margin: 24px 0 0 0;
+}
+
+article .formColsContainer {
+	float: left;
+	display: block;
+	width: 100%;
 }
 
 article .smallText {
@@ -522,6 +607,7 @@ article .formCol .twoCol {
 	float: left;
 	width: 50%;
 	display: inline;
+	margin-right: 0;
 	vertical-align: bottom;
 }
 
@@ -598,6 +684,19 @@ article .rightImage {
 	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
+article .leftImage {
+	float: left;
+	display: inline;
+	background: #fff;
+	padding: 5px;
+	margin: 0 25px 25px 0;
+	border: 1px solid #c5c3c3;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
 article .imageBorder {
 	display: inline;
 	background: #fff;
@@ -621,6 +720,13 @@ article .heroImage {
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+article .twoCol {
+	float: left;
+	display: inline;
+	width: 47%;
+	margin-right: 3%;
 }
 
 article .largeCol .teaserBox img {
@@ -666,8 +772,23 @@ article #PageLogInForm input[type='text'],
 article #PageLogInForm input[type='password'] {
 	font-size: 14px;
 	padding: 8px;
-	margin: 0 25px 0 10px;
-	width: 234px;
+	margin: 4px 25px 20px 0;
+	width: 350px;
+	clear: both;
+	display: block;
+}
+
+article #PageLogInForm input[type='submit'] {
+	margin-right: 16px;
+}
+
+article #PageLogInForm #PageLogInTerms {
+	float: right;
+	width: 450px;
+	height: 168px; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-top: -130px;
 }
 
 article .errorMessage {
@@ -700,6 +821,274 @@ article ul.aircraftGallery li a {
 
 article ul.aircraftGallery li a img {
 	margin: 0 4px 8px 4px;
+}
+
+article ul#FAQ {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+article ul#FAQ li {
+	background: url('../images/core/question.gif') no-repeat top left;
+	padding: 20px 0 20px 98px;
+}
+
+article ul#FAQ h2 {
+	text-transform: none;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+article ul#FAQ p {
+	background: url('../images/core/answer.gif') no-repeat top left;
+	padding-left: 60px;
+}
+
+article ul.twoColList {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+article ul.twoColList li {
+	border-bottom: 1px solid #C3C2BF;
+	float: left;
+	display: block;
+	width: 272px;
+	height: 324px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 16px 40px;
+	text-align: center;
+}
+
+article ul.twoColList li h2 {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 20px 0 8px 0;
+	text-transform: none;
+	letter-spacing: 0;
+	word-spacing: 0;
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+article ul.twoColList li p {
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+article ul.twoColList li .leftImage {
+	clear: both;
+	margin-bottom: 0;
+}
+
+article ul.threeColList {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+article ul.threeColList li {
+	border-bottom: 1px solid #C3C2BF;
+	float: left;
+	display: block;
+	width: 172px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 16px 40px;
+	text-align: center;
+}
+
+article ul.threeColList li h2 {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 20px 0 8px 0;
+	text-transform: none;
+	letter-spacing: 0;
+	word-spacing: 0;
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+article ul.contentList {
+	margin: 0 0 20px 0;
+	padding: 0;
+	list-style-type: none;
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+article ul.contentList li {
+	border-bottom: 1px solid #C3C2BF;
+	float: left;
+	display: block;
+	width: 100%;
+	padding: 0 0 20px 0;
+	margin: 20px 0;
+}
+
+article ul.contentList li h2,
+article ul#WeatherLinks li h3  {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	text-transform: none;
+	letter-spacing: 0;
+	word-spacing: 0;
+	word-wrap: break-word;
+}
+
+article ul.contentList li h3,
+article ul#WeatherLinks li h4 {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	margin: 0 0 20px 0;
+	text-transform: none;
+	letter-spacing: 0;
+	word-spacing: 0;
+	word-wrap: break-word;
+}
+
+article ul.contentList li .button {
+	float: left;
+	display: block;
+	margin-bottom: 20px;
+}
+
+article ul.noBorderList {
+	margin-bottom: 40px;
+}
+
+article ul.noBorderList li {
+	text-align: left;
+	border-bottom: none;
+	margin-bottom: 10px;
+	height: auto;
+}
+
+article .weatherData {
+	margin-bottom: 40px;
+}
+
+article .weatherData h3 {
+	margin-bottom: 4px;
+}
+
+article .weatherData h4 {
+	margin-bottom: 0;
+}
+
+article ul.weatherForecast .weatherImage,
+article .weatherData .weatherImage {
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+article ul.weatherForecast .weatherDesc,
+article .weatherData .weatherDesc {
+	float: left;
+	margin-bottom: 20px;
+	margin-top: 4px;
+}
+
+
+article .weatherData ul {
+	float: left; 
+	display: block; 
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+article .weatherData ul li {
+	float: left; 
+	display: block; 
+	width: 50%;
+	margin: 0;
+	padding: 0;
+}
+
+article ul.weatherForecast {
+	float: left; 
+	display: block; 
+	width: 100%;
+	list-style-type: none;
+	margin: 20px 0;
+	padding: 0;
+}
+
+article ul.weatherForecast li {
+	float: left; 
+	display: block; 
+	width: 44%;
+	height: 170px;
+	padding: 0 0 40px 0;
+	margin: 0 3% 40px 3%;
+	border-bottom: 1px solid #C3C2BF;
+}
+
+article ul.weatherForecast li h3 {
+	margin-bottom: 4px;
+}
+
+article ul.weatherForecast li h4 {
+	font-size: 16px;
+}
+
+article ul.weatherForecast li p {
+	float: left;
+	margin-bottom: 0;
+	width: 100%;
+	display: block;
+}
+
+article #ContactDetails {
+	margin-bottom: 20px;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+article #ContactDetails h3 {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	margin: 0 0 4px 0;
+	text-transform: none;
+	letter-spacing: 0;
+	word-spacing: 0;
+}
+
+article #ContactDetails p {
+	margin-bottom: 12px;
+}
+
+article ul#PreviousClubGrup li {
+	height: 255px;
+}
+
+article ul#PreviousClubGrup li .leftImage {
+	float: none;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media only screen and (max-width: 950px) {
@@ -824,6 +1213,10 @@ article ul.aircraftGallery li a img {
 		z-index: 2;
 	}
 
+	header nav#MembersNav #MembersNavLogIn form label {
+		text-align: left;
+	}
+
 	header #SocialMedia {
 		display: none;
 	}
@@ -898,15 +1291,56 @@ article ul.aircraftGallery li a img {
 		float: left;
 	}
 
+	article #PageLogInForm #PageLogInTerms {
+		float: none;
+		width: 93%;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
 	article #WeatherInfo {
 		width: 100%;
 		text-align: center;
 	}
 
+	article ul.threeColList,
+	article ul.twoColList {
+		float: none;
+		display: inline-block;
+	}
+
+	article ul.twoColList li {
+		float: none;
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		padding: 0 0 20px 0;
+		margin: 0 0 40px 0;
+		text-align: center;
+	}
+
+	article ul.twoColList li h2 {
+		float: none;
+	}
+
+	article ul.twoColList li p {
+		float: none;
+	}
+
+	article ul.twoColList li .leftImage {
+		float: none;
+		clear: both;
+		margin: 0;
+	}
+
+	article ul.noBorderList li {
+		margin-bottom: 10px;
+	}
+
 }
 
 @media only screen and (max-width: 850px) {
-	
+
 	article .teaserBox {
 		padding-bottom: 0;
 	}
@@ -920,6 +1354,20 @@ article ul.aircraftGallery li a img {
 	article .largeCol a.teaserImage img {
 		float: left;
 		display: inline;
+	}
+
+	article .weatherData ul li {
+		float: left; 
+		display: block; 
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	article ul.weatherForecast li {
+		width: 100%;
+		height: auto;
+		margin: 0 0 40px 0;
 	}
 }
 
@@ -942,6 +1390,19 @@ article ul.aircraftGallery li a img {
 		float: none;
 		display: block;
 		margin: 0 0 25px 0;
+	}
+
+	article .rightImage {
+		float: none;
+		display: block;
+		clear: both;
+		text-align: left;
+		margin: 0 0 16px 0;
+	}
+
+	article .twoCol {
+		width: 100%;
+		margin-right: 0;
 	}
 
 }
@@ -1035,6 +1496,10 @@ article ul.aircraftGallery li a img {
 		width: 100%;
 		overflow: hidden;
 		text-align: center;
+	}
+
+	article ul#PreviousClubGrup li {
+		height: auto;
 	}
 
 }

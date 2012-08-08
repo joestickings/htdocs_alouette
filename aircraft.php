@@ -35,6 +35,9 @@
         <ul class="aircraftGallery">
             <li><a href="images/aircraft/gallery_large_1.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_1.jpg" width="182" height="130" alt="Cessna 172 G-BRAK" class="imageBorder" /></a></li>
             <li><a href="images/aircraft/gallery_large_2.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_2.jpg" width="182" height="130" alt="Cessna 172 G-BRAK" class="imageBorder" /></a></li>
+            <li><a href="images/aircraft/gallery_large_8.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_8.jpg" width="182" height="130" alt="Cessna 172 G-BRAK" class="imageBorder" /></a></li>
+            <li><a href="images/aircraft/gallery_large_10.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_10.jpg" width="182" height="130" alt="Cessna 172 G-BRAK" class="imageBorder" /></a></li>
+            <li><a href="images/aircraft/gallery_large_11.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_11.jpg" width="182" height="130" alt="Cessna 172 G-BRAK" class="imageBorder" /></a></li>
             <li><a href="images/aircraft/gallery_large_3.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_3.jpg" width="182" height="130" alt="Cessna 172 G-BRAK" class="imageBorder" /></a></li>
         </ul>
 
@@ -42,6 +45,9 @@
         <ul class="aircraftGallery">
             <li><a href="images/aircraft/gallery_large_4.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_4.jpg" width="182" height="130" alt="Piper Warrior PA28 G-BUJO" class="imageBorder" /></a></li>
             <li><a href="images/aircraft/gallery_large_5.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_5.jpg" width="182" height="130" alt="Piper Warrior PA28 G-BUJO" class="imageBorder" /></a></li>
+            <li><a href="images/aircraft/gallery_large_7.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_7.jpg" width="182" height="130" alt="Piper Warrior PA28 G-BUJO" class="imageBorder" /></a></li>
+            <li><a href="images/aircraft/gallery_large_9.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_9.jpg" width="182" height="130" alt="Piper Warrior PA28 G-BUJO" class="imageBorder" /></a></li>
+            <li><a href="images/aircraft/gallery_large_13.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_13.jpg" width="182" height="130" alt="Piper Warrior PA28 G-BUJO" class="imageBorder" /></a></li>
             <li><a href="images/aircraft/gallery_large_6.jpg" rel="photoGallery[gallery1]"><img src="images/aircraft/gallery_thumb_6.jpg" width="182" height="130" alt="Piper Warrior PA28 G-BUJO" class="imageBorder" /></a></li>
         </ul>
 
