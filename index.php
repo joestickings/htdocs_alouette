@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head> 
 	<title><?php echo strpos($_SERVER['HTTP_USER_AGENT'], 'iP')?'Alouette': 'Alouette Flying Club - Based at Biggin Hill - We put the fun back into flying'; ?></title>
@@ -10,7 +10,6 @@
     <link href="css/base.css" rel="stylesheet" media="screen" type="text/css">
     <!--[if lt IE 9]>
         <link href="css/ie.css" rel="stylesheet" media="screen" type="text/css">
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script type="text/javascript" language="javascript" src="js/jquery.cross-slide.min.js"></script>
     
@@ -23,7 +22,7 @@
 <?php $TabName = "Home"; ?>
 <?php include "common/header.php"; ?>
 
-<article>
+<div id="Content" class="clear">
 	<div class="mainFeature clear">
             <div id="HomeMainFeatureImages" class="mainFeatureImages">
                 <!-- -->
@@ -33,7 +32,7 @@
                 <h1>Alouette Flying Club</h1>
                 <h2>We put the fun back into flying</h2>
                 <p>Alouette is, first and foremost, a club which is run for the members, by the members. We have no employees which keeps our overheads low and allows us to keep the cost of flying down, an all-important consideration in these days of rising prices. Our flying rates are still among the cheapest in the South East of England!</p>
-                <a href="/about-us" class="button clear" title="More about Alouette">More about Alouette</a>
+                <a href="/about-us" class="button" title="More about Alouette">More about Alouette</a>
             </div>
     </div>
 
@@ -49,7 +48,7 @@
                 <div class="teaserContent">
                     <h2>Trial flights</h2>
                     <p>Trial lessons are of one hour duration with a qualified instructor and the recipient will spend most of this time at the controls of the aircraft. The flight will be from Biggin Hill and will return to Biggin Hill.</p>
-                    <a href="/trial-flights" class="button clear" title="More about trial flights">More about trial flights</a>
+                    <a href="/trial-flights" class="button" title="More about trial flights">More about trial flights</a>
                 </div>
             
             </div>
@@ -63,7 +62,7 @@
                 <div class="teaserContent">
                     <h2>Alouette news</h2>
                     <p>Want to find out what is going on at the club? You can view video diaries from Alouette pilots aswell as details about social events, club grub nights and other important club information on our ‘latest news’ page.</p>
-                    <a href="/alouette-news" class="button clear" title="View the latest Alouette news">View the latest Alouette news</a>
+                    <a href="/alouette-news" class="button" title="View the latest Alouette news">View the latest Alouette news</a>
                 </div>
             
             </div>
@@ -84,7 +83,7 @@
     <?php include "common/online-booking-login.php"; ?>
 
 
-</article>
+</div>
 
 
 <?php include "common/footer.php"; ?>

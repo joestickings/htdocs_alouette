@@ -131,4 +131,93 @@ $(document).ready(function(){
 		$("a[rel^='videoDiary']").prettyPhoto();
 	} catch(e) {}
 
+	//ACCOUNTS - SEND SHOPPING CART
+	$("#AccountsForm").submit(function(){
+
+		
+		$("#AccountsForm_MembershipNumber").validateEmpty();
+		
+		if($(".errorMessage").is(":visible")) {
+			//SCROLL TO ERROR
+			$('html,body').animate({scrollTop: ($(".errorMessage:visible").offset().top - 50)},'slow');
+			return false;
+		} else {
+			
+			var numberOfItems = $("#AccountsTable tr").size();
+			var getMembershipNumber = $("#AccountsForm_MembershipNumber").val();
+			var itemsHTML = "";
+			var itemNumber = 0;
+
+			for(i=1;i<numberOfItems; i++) {
+				
+				var getItemName = $("#AccountsTable tr").eq(i).find("td").eq(0).text();
+				var getItemAmount = $("#AccountsTable tr").eq(i).find("td").eq(1).text().replace("£","");
+				var getQuantity = $("#AccountsTable tr").eq(i).find("input").val();
+
+				if(getQuantity == "0" || getQuantity == "") { } else {
+					
+					itemNumber++;
+					itemsHTML += '<input type="hidden" name="on0_'+itemNumber+'" value="Membership no" />\n';
+					itemsHTML += '<input type="hidden" name="os0_'+itemNumber+'" value="'+getMembershipNumber+'" />\n';
+					itemsHTML += '<input type="hidden" name="item_name_'+itemNumber+'" value="'+getItemName+'" />\n';
+		        	itemsHTML += '<input type="hidden" name="amount_'+itemNumber+'" value="'+getItemAmount+'">\n';
+		        	itemsHTML += '<input type="hidden" name="quantity_'+itemNumber+'" value="'+getQuantity+'">\n\n';
+				
+				}
+			}
+
+			$("#ShoppingCartItems").html(itemsHTML);
+
+			return true;
+		}
+		return false;
+
+	});
+
+	//ACCOUNTS - CALCULATE TOTAL
+
+	function CalculateTotal() {
+
+		var overall = 0;
+
+	    $("#AccountsTable tbody tr").each(function()
+	    {
+
+	        var qnt = $(this).find("td").eq(2).find("input").val();
+
+	        if(qnt == "") {
+	        	qnt = 0;
+	        }
+
+	        var price = $(this).find("td").eq(1).text().replace("£","");
+
+	        var sum = parseFloat(price) * parseFloat(qnt);
+	        
+	        overall+= sum;
+
+	    });
+
+
+		$("#AccountsForm .price").text("£"+overall.toFixed(2));
+
+
+		//Show or hide the total price module
+		if(parseFloat($("#AccountsForm .price").text().replace("£","")) >= 1 ) {
+			$("#AccountsTotalContent").slideDown();
+		} else {
+			$("#AccountsTotalContent").slideUp();
+		}
+	}
+
+
+	try{
+		CalculateTotal();
+	} catch(e) {}
+
+	$("#AccountsTable input").keyup(function(){
+
+		CalculateTotal();
+	
+	});
+
 });

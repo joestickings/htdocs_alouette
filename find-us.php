@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head> 
     <title><?php echo strpos($_SERVER['HTTP_USER_AGENT'], 'iP')?'Alouette': 'Alouette Flying Club - Find us'; ?></title>
@@ -10,7 +10,6 @@
     <link href="css/base.css" rel="stylesheet" media="screen" type="text/css">
     <!--[if lt IE 9]>
         <link href="css/ie.css" rel="stylesheet" media="screen" type="text/css">
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
 </head>
@@ -22,7 +21,7 @@
 <?php $TabName = "Find us"; ?>
 <?php include "common/header.php"; ?>
 
-<article>
+<div id="Content" class="clear">
     <div class="largeCol">
 
         <h1>Find us</h1>
@@ -49,7 +48,7 @@
         
         <h2>Map</h2>
         <iframe width="98%" height="450" class="leftImage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Alouette+Flying+Club,+Churchill+Way,+Westerham&amp;aq=1&amp;sll=51.104064,0.111772&amp;sspn=0.173753,0.441513&amp;ie=UTF8&amp;hq=Alouette+Flying+Club,+Churchill+Way,&amp;hnear=Westerham,+United+Kingdom&amp;ll=51.371352,0.046692&amp;spn=0.150028,0.377655&amp;z=11&amp;iwloc=A&amp;output=embed"></iframe>
-        <a href="http://maps.google.co.uk/maps?f=q&source=embed&hl=en&geocode=&q=Alouette+Flying+Club,+Churchill+Way,+Westerham&aq=1&sll=51.104064,0.111772&sspn=0.173753,0.441513&ie=UTF8&hq=Alouette+Flying+Club,+Churchill+Way,&hnear=Westerham,+United+Kingdom&ll=51.371352,0.046692&spn=0.150028,0.377655&z=11&iwloc=A" target="_blank" title="View on Google Maps" class="button clear">View on a larger map</a>
+        <a href="http://maps.google.co.uk/maps?f=q&source=embed&hl=en&geocode=&q=Alouette+Flying+Club,+Churchill+Way,+Westerham&aq=1&sll=51.104064,0.111772&sspn=0.173753,0.441513&ie=UTF8&hq=Alouette+Flying+Club,+Churchill+Way,&hnear=Westerham,+United+Kingdom&ll=51.371352,0.046692&spn=0.150028,0.377655&z=11&iwloc=A" target="_blank" title="View on Google Maps" class="button">View on a larger map</a>
     </div>
 
     <div class="utilityCol smallCol">
@@ -60,7 +59,7 @@
 
     </div>
     
-</article>
+</div>
 
 
 <?php include "common/footer.php"; ?>

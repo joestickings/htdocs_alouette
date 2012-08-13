@@ -6,3 +6,5 @@ DirectoryIndex index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^([^\.]+)$ $1.php [NC,L,QSA]
+
+ErrorDocument 404 /404

@@ -1,4 +1,4 @@
-<footer class="clear">
+<div id="Footer" class="clear">
     <div id="FooterContent">
             
         <ul class="first clear">
@@ -9,8 +9,8 @@
         <ul class="clear">
             <li class="first">Members area:</li>
             <li><a href="/alouette-news">Latest news</a></li>
-            <li><a href="#">Accounts</a></li>
-            <li><a href="#">Bookings</a></li>
+            <li><a href="/accounts">Accounts</a></li>
+            <li><a href="/bookings">Bookings</a></li>
             <li class="last"><a href="#MembersNav" id="FooterOnlineBooking">Online booking</a></li>
         </ul>
 
@@ -33,4 +33,4 @@
         </div>
 
     </div>
-</footer>
+</div>

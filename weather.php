@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head> 
     <title><?php echo strpos($_SERVER['HTTP_USER_AGENT'], 'iP')?'Alouette': 'Alouette Flying Club - Weather'; ?></title>
@@ -10,7 +10,6 @@
     <link href="css/base.css" rel="stylesheet" media="screen" type="text/css">
     <!--[if lt IE 9]>
         <link href="css/ie.css" rel="stylesheet" media="screen" type="text/css">
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script language="javascript" type="text/javascript" src="http://free.worldweatheronline.com/feed/weather.ashx?q=Biggin%20Hill&amp;format=json&amp;num_of_days=5&amp;key=c5f281ac06125012120208&amp;callback=var getData ="></script>
     <script type="text/javascript" language="javascript" src="js/weather.js"></script>
@@ -24,7 +23,7 @@
 <?php $TabName = "Weather"; ?>
 <?php include "common/header.php"; ?>
 
-<article>
+<div id="Content" class="clear">
     <div class="largeCol">
 
         <h1>Weather</h1>
@@ -86,7 +85,7 @@
 
     </div>
     
-</article>
+</div>
 
 
 <?php include "common/footer.php"; ?>

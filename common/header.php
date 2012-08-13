@@ -1,4 +1,4 @@
-<header>
+<div id="Header">
 	
     <div id="HeaderContent">
         <a href="/index" id="Logo" title="Alouette Flying Club">
@@ -6,14 +6,14 @@
             <img src="../images/core/logo_text.gif" width="134" height="36" alt="Established 1959 Based at Biggin Hill" id="LogoText" />
         </a>
 
-        <nav id="MembersNav">
+        <div id="MembersNav">
 
             <span>Members area:</span>
 
             <ul>
                 <li><a href="/alouette-news">Latest news</a></li>
-                <li><a href="#">Accounts</a></li>
-                <li><a href="#">Bookings</a></li>
+                <li><a href="/accounts">Accounts</a></li>
+                <li><a href="/bookings">Bookings</a></li>
                 <li><button>Online booking</button></li>
             </ul>
 
@@ -54,7 +54,7 @@ Alouette Flying Club does not take any responsibility for any loss, damage or ot
                 </form>
 
             </div>
-        </nav>
+        </div>
 
         <?php if(!is_mobile_phone()) { ?>
             <div id="SocialMedia">
@@ -93,7 +93,7 @@ Alouette Flying Club does not take any responsibility for any loss, damage or ot
 
     </div>
 
-    <nav id="MainNav">
+    <div id="MainNav">
 
             <button id="ShowMenuButton">Show main menu <span class="icon plus"><!-- --></span></button>
 
@@ -111,9 +111,9 @@ Alouette Flying Club does not take any responsibility for any loss, damage or ot
                 <li <?php if($TabName == "Find us") { ?>class="selected last"<?php } else { ?>class="last"<?php } ?>><a href="/find-us">Find us</a></li>
             </ul>  
 
-    </nav>
+    </div>
 
-</header>
+</div>
 
 
 <?php

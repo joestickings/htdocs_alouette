@@ -5,26 +5,26 @@ input[type='submit'] {
    	overflow:visible;
 }
 
-header nav#MainNav ul li,
-header nav#MainNav ul li a,
-header nav#MembersNav #MembersNavLogIn form label {
+#Header #MainNav ul li,
+#Header #MainNav ul li a,
+#Header #MembersNav #MembersNavLogIn form label {
 	display: inline;
 	zoom: 1;
 }
 
-header nav#MembersNav #MembersNavLogIn form {
+#Header #MembersNav #MembersNavLogIn form {
 	top: 30px;
 }
 
-header nav#MainNav ul li {
+#Header #MainNav ul li {
 	margin: 0;
 }
 
-footer #FooterContent ul li {
+#Footer #FooterContent ul li {
 	padding-right: 4px;
 	margin-right: 10px;
 }
 
-footer #FooterContent ul li.first {
+#Footer #FooterContent ul li.first {
 	margin-right: 10px;
 }
